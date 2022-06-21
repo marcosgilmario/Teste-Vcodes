@@ -1,0 +1,44 @@
+version: '3.8'
+
+services:
+  postgres:
+    container_name: db-vcodes-test
+    image: postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: db-vcodes-test
+    expose:
+     - 5432
+    ports:
+      - '5432:5432'
+    volumes:
+      - db:/var/lib/postgresql/data
+
+  api-vccodes:
+    container_name: api-vcodes-test
+    build:
+      context: ./backend-vcodes-test
+      dockerfile: Dockerfile
+    environment:
+      DB_SCHEMA: db-vcodes-test
+      DB_USER: postgres
+      DB_PASSWORD: postgres
+      DB_HOST: postgres
+    depends_on:
+      - postgres
+    ports:
+      - '5000:5000'
+
+  app:
+    container_name: front-vcodes-test
+    build:
+      context: ./front-vcodes-test
+      dockerfile: Dockerfile.dev
+    volumes:
+      - ./src:/app./front-vcodes-test
+    ports:
+      - "3000:3000"
+  
+volumes:
+  db:
