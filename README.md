@@ -46,7 +46,7 @@
 ---
 
 ## Executar com o Docker
-
+--
 1. Clone o reposiório:
 
 `$ git clone https://github.com/marcosgilmario/Teste-Vcodes.git`
@@ -87,7 +87,9 @@ Retorne à pasta principal
 
 1. caso queira executar no próprio banco do docker antes de inicializar o container altere a url base de requisição da api em `/front-vcodes-test/src/services/api.js` para `http://localhost:5000`
 
+--
 ## Executar sem o Docker
+--
 
 OBS: Dependencias do backend
 
