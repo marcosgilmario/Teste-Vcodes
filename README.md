@@ -59,7 +59,7 @@
 
 Instale as dependências do front-end
 
-`$ cd /front-vcodes-test`
+`$ cd /frontend-test`
 
 `$ npm install` ou `$ yarn install`
 
@@ -69,7 +69,7 @@ Retorne à pasta principal
 
 Agora instale as dependencias do back-end (opcional)
 
-`$ cd /front-vcodes-test`
+`$ cd /frontend-test`
 
 `$ npm install` ou `$ yarn install`
 
@@ -85,7 +85,7 @@ Retorne à pasta principal
 
 ## OBS:
 
-1. caso queira executar no próprio banco do docker antes de inicializar o container altere a url base de requisição da api em `/front-vcodes-test/src/services/api.js` para `http://localhost:5000`
+1. caso queira executar no próprio banco do docker antes de inicializar o container altere a url base de requisição da api em `/frontend-test/src/services/api.js` para `http://localhost:5000`
 
 --
 ## Executar sem o Docker
@@ -93,11 +93,11 @@ Retorne à pasta principal
 
 OBS: Dependencias do backend
 
-- Criar uma conexão de banco de dados local e editar as informações em referentes à conexão em `/backend-vcodes-test/consig/config.json`
+- Criar uma conexão de banco de dados local e editar as informações em referentes à conexão em `/backend-test/consig/config.json`
 
 1. Execute os passos 1, 2 e 3 na [sessão anterior](#executar-com-o-docker) incluindo a instalação de dependencias do backend
 
-2. Na pasta principal do repositório acesse ambas as pastas `/front-vcodes-test` e `/backend-vcodes-test` em terminais diferentes e então execute em cada terminal
+2. Na pasta principal do repositório acesse ambas as pastas `/frontend-test` e `/backend-test` em terminais diferentes e então execute em cada terminal
 
 `$ npm start` ou `yarn start`
 
